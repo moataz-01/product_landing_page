@@ -15,7 +15,7 @@ function init() {
       imageWrapper.classList.add("selected");
     }
     var image = document.createElement("img");
-    image.src = imagesUrl.replace("{seed}",i+1);
+    image.src = imagesUrl.replace("{seed}", i + 1);
     console.log(i);
     imageWrapper.appendChild(image);
     var mirrored = image.cloneNode();

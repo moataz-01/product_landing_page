@@ -11,10 +11,11 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: #131313;
 }
 
@@ -60,12 +61,13 @@ body {
   color: #ccc;
 }
 
-.container {
-  width: 100%;
+main .container {
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
+  margin: auto;
+  height: 95vh;
 }
-
 
 .gallery {
   /* max-width: 800px; */
@@ -209,28 +211,29 @@ img {
   width: 400px;
   height: 350px;
 }
+
 .product-info {
   width: 40%;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   padding: 20px;
 }
 
 .button-24 {
-  background: #FF4742;
-  border: 1px solid #FF4742;
+  background: #ff4742;
+  border: 1px solid #ff4742;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
   min-height: 40px;
   outline: 0;
-  padding: 12px 14px;
+  padding: 15px 100px;
   text-align: center;
   text-rendering: geometricprecision;
   text-transform: none;
@@ -244,9 +247,85 @@ img {
 .button-24:active {
   background-color: initial;
   background-position: 0 0;
-  color: #FF4742;
+  color: #ff4742;
 }
 
 .button-24:active {
-  opacity: .5;
+  opacity: 0.5;
+}
+
+span {
+  padding: 5px;
+  color: gray;
+  display: block;
+}
+
+footer {
+  background-color: #ccc;
+  padding: 20px;
+}
+
+footer .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col-md-4 {
+  flex-basis: 30%;
+}
+
+footer h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer a {
+  color: #333;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  footer .col-md-4 {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 1678px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .gallery {
+    width: 100%;
+  }
+  .product-info {
+    z-index: 5;
+    width: 100%;
+  }
+  .navbar {
+    padding: 20px;
+  }
+  .wrapper, .flipped {
+    width: 350px;
+  }
 }
